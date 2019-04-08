@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.curso.java.model.entities</groupId>
-	<artifactId>Cliente</artifactId>
+	<artifactId>cliente</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Cliente</name>
 	<description>Client project for Spring Boot</description>
