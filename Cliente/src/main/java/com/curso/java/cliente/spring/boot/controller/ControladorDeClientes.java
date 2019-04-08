@@ -1,4 +1,4 @@
-package com.curso.java.spring.boot.controller;
+package com.curso.java.cliente.spring.boot.controller;
 
 import java.util.List;
 
@@ -10,26 +10,31 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.curso.java.spring.boot.model.entities.Cliente;
-import com.curso.java.spring.boot.model.entities.ClienteRepository;
+import com.curso.java.cliente.spring.boot.model.ClienteRepository;
+import com.curso.java.cliente.spring.boot.model.entities.Cliente;
 
 @RestController
 public class ControladorDeClientes {
 	
 	private final ClienteRepository repository;
-	
+
+	public ClienteRepository getRepository() {
+		return repository;
+	}
+
 	public ControladorDeClientes(ClienteRepository repository) {
+		super();
 		this.repository = repository;
 	}
-	
+
 	@GetMapping("/clientes")
 	public List<Cliente> clientes(){
 		return repository.findAll();
 	}
 	
-	@GetMapping("/clientes/{id}")
-	public Cliente cliente(@PathVariable Integer id) {
-		return repository.findById(id)
+	@GetMapping("/clientes/{matricula}")
+	public Cliente cliente(@PathVariable String matricula) {
+		return repository.findById(matricula)
 				.orElse(null);
 	}
 	
@@ -38,31 +43,23 @@ public class ControladorDeClientes {
 		return repository.save(cliente);
 	}
 	
-	@DeleteMapping("/clientes/{id}")
-	public void borrarCliente(@PathVariable Integer id) {
-		repository.deleteById(id);
+	@DeleteMapping("/clientes/{matricula}")
+	public void borrarCliente(@PathVariable String matricula) {
+		repository.deleteById(matricula);
 	}
-	@PutMapping("/clientes/{id}")
-	public Cliente actualizarCliente(@RequestBody Cliente cliente,@PathVariable Integer id) {
-		return repository.findById(id)
+	@PutMapping("/clientes/{matricula}")
+	public Cliente actualizarCliente(@RequestBody Cliente cliente,@PathVariable String matricula) {
+		return repository.findById(matricula)
 			.map(c -> {
 					c.setNombre(cliente.getNombre());
-					c.setValor(cliente.getValor());
+					c.setDireccion(cliente.getDireccion());
 					return repository.save(c);
 				})
 			.orElseGet(()->{
-				cliente.setId(id);
+				cliente.setDireccion(matricula);
 				return repository.save(cliente);
-			});
-			
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+});
+
+
+}
 }

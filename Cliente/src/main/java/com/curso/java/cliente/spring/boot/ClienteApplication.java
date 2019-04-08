@@ -1,13 +1,14 @@
-package com.curso.java.spring.boot;
+package com.curso.java.cliente.spring.boot;
+
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Ejemplo14springBootRestJpaDataApplication {
+public class ClienteApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ejemplo14springBootRestJpaDataApplication.class, args);
+		SpringApplication.run(ClienteApplication.class, args);
 	}
 
 }

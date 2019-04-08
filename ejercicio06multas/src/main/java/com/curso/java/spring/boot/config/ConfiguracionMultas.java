@@ -12,9 +12,9 @@ public class ConfiguracionMultas {
 	@Bean
 	public CommandLineRunner iniciarBaseDeDatos(MultaRepository repo) {
 		return args -> {
-			repo.save(new Multa(1, "leve", 100));
-			repo.save(new Multa(2, "moderada", 1000));
-			repo.save(new Multa(3, "grave", 10000));
+			repo.save(new Multa("1", "leve", 100));
+			repo.save(new Multa("2", "moderada", 1000));
+			repo.save(new Multa("3", "grave", 10000));
 		};
 	}
 	
