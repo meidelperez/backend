@@ -1,4 +1,4 @@
-package com.curso.java.spring.boot;
+package com.curso.java.cliente.spring.boot;
 
 
 import org.springframework.boot.SpringApplication;

@@ -3,7 +3,10 @@ spring:
     url: jdbc:mysql://localhost:3307/test
     username: root
     password: root
-  jpa:  
+  jpa:
+    hibernate:
+      ddl-auto: update
+      
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL55Dialect  
+        dialect: org.hibernate.dialect.MySQL55Dialect

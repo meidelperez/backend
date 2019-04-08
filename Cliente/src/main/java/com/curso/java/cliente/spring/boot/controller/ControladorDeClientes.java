@@ -1,4 +1,4 @@
-package com.curso.java.spring.boot.controller;
+package com.curso.java.cliente.spring.boot.controller;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.curso.java.spring.boot.model.entities.Cliente;
-import com.curso.java.spring.boot.model.entities.ClienteRepository;
+import com.curso.java.cliente.spring.boot.model.ClienteRepository;
+import com.curso.java.cliente.spring.boot.model.entities.Cliente;
 
 @RestController
 public class ControladorDeClientes {

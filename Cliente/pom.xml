@@ -9,7 +9,7 @@
 		<version>2.1.4.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.curso.java.model.entities</groupId>
+	<groupId>com.curso.java</groupId>
 	<artifactId>cliente</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Cliente</name>

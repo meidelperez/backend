@@ -1,4 +1,4 @@
-package com.curso.java.spring.boot.model.entities;
+package com.curso.java.cliente.spring.boot.model.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,7 +7,6 @@ import javax.persistence.Id;
 @Entity
 public class Cliente {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String matricula;
 	private String nombre;
 	private String apellidos;
