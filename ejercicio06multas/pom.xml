@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.curso.java.spring.boot</groupId>
-	<artifactId>ejemplo14springBootRestJPAData</artifactId>
+	<artifactId>ejercicio06multasDataAplication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ejemplo14springBootRestJPAData</name>
+	<name>ejercicio06multasDataAplication</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
