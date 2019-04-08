@@ -11,11 +11,11 @@ public class Multa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private Integer matricula;
+	private String matricula;
 	private String categoria;
 	private Integer cantidad;
 	
-	public Multa(Integer matricula, String categoria, Integer cantidad) {
+	public Multa(String matricula, String categoria, Integer cantidad) {
 		super();
 		this.matricula=matricula;
 		this.categoria = categoria;
@@ -34,11 +34,11 @@ public class Multa {
 		this.id = id;
 	}
 
-	public Integer getMatricula() {
+	public String getMatricula() {
 		return matricula;
 	}
 
-	public void setMatricula(Integer matricula) {
+	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
 
