@@ -10,7 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import com.curso.java.cliente.spring.boot.model.entities.Cliente;
+import com.curso.spring.boot.modelito.entities.Cliente;
 
 //@SpringBootApplication
 public class SpringBootRestClientApplication {
